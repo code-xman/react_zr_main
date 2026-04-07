@@ -19,7 +19,6 @@
  * @doc https://pro.ant.design/zh-CN/docs/advanced-menu
  */
 
-import access from '@/access';
 import routerSub from './routes.sub';
 
 const routes = [
@@ -29,9 +28,28 @@ const routes = [
     redirect: '/home',
   },
   {
+    name: '登录',
+    path: '/login1',
+    component: './Login/login1',
+    hideInMenu: true,
+    layout: false,
+  },
+  {
+    name: '全息登录',
+    path: '/login2',
+    component: './Login/login2',
+    hideInMenu: true,
+    layout: false,
+  },
+  {
     name: '首页',
     path: '/home',
     component: './Home',
+  },
+  {
+    name: 'AI 聊天',
+    path: '/chat',
+    component: './Chat',
   },
   {
     name: '权限演示',
@@ -58,6 +76,39 @@ const routes = [
         path: '/models/user2',
         component: './UserInfo/User2',
         access: 'canSeeUser2',
+      },
+    ],
+  },
+  {
+    name: 'Charts',
+    path: '/Charts',
+    routes: [
+      {
+        name: 'AntdCharts',
+        path: '/Charts/AntdCharts',
+        routes: [
+          {
+            name: 'AntdCharts 折线图',
+            path: '/Charts/AntdCharts/line',
+            component: './Charts/AntdCharts/Line',
+          },
+          {
+            name: 'AntdCharts 柱状图',
+            path: '/Charts/AntdCharts/column',
+            component: './Charts/AntdCharts/Column',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Three',
+    path: '/threes',
+    routes: [
+      {
+        name: 'base',
+        path: '/threes/base',
+        component: './Three/Base',
       },
     ],
   },

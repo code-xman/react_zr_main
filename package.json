@@ -8,18 +8,27 @@
     "prepare": "husky",
     "postinstall": "max setup",
     "setup": "max setup",
-    "start": "npm run dev"
+    "start": "cross-env REACT_APP_ENV=dev UMI_ENV=dev max dev"
   },
   "dependencies": {
+    "@ai-sdk/deepseek": "^2.0.26",
+    "@ai-sdk/openai": "^3.0.48",
     "@ant-design/icons": "^6.0.0",
+    "@ant-design/plots": "^2.6.4",
     "@ant-design/pro-components": "^2.8.7",
     "@umijs/max": "^4.4.10",
+    "ai": "^6.0.141",
     "antd": "^5.24.8",
-    "qiankun": "^2.10.16"
+    "cross-env": "^7.0.3",
+    "dat.gui": "^0.7.9",
+    "qiankun": "^2.10.16",
+    "three": "^0.177.0"
   },
   "devDependencies": {
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
+    "dotenv": "^17.4.1",
+    "dotenv-cli": "^11.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
